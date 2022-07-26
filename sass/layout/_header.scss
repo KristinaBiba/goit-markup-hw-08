@@ -1,9 +1,29 @@
 .header {
     border-bottom: 1px solid var(--header-border);
 
-    &__container {
-        display: flex;
-        align-items: center;
-    }
+    // &__container {
+    //     display: flex;
+    //     align-items: center;
+    // }
 }
 
+.header-inner {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+.icon-menu, 
+.icon-close {
+    position: absolute;
+    right: -5px;
+    top: 10px;
+}
+.icon-close {
+    display: none;
+}
+.mobile-menu.is-open .icon-close {
+    display: block;
+}
+.mobile-menu.is-open .icon-menu {
+    display: none;
+}

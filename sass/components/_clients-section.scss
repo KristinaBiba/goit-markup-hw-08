@@ -2,8 +2,8 @@
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
 }
 
 .clients__list-item:not(:last-child) {
@@ -11,9 +11,9 @@
 }
 
 .client-link {
-    @extend %flex-center;
-    width: 170px;
-    height: 92px;
+    // @extend %flex-center;
+    // width: 170px;
+    // height: 92px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
 
@@ -28,9 +28,9 @@
 }
 
 .client-link__img {
-    display: flex;
+    // display: flex;
 
-    justify-content: center;
+    // justify-content: center;
 
     fill: var(--icon-color);
 
