@@ -1,0 +1,20 @@
+.section-features {
+    margin-top: 94px;
+
+    &__icon {
+        @extend %flex-center;
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+        border-radius: 4px;
+
+        background-color: var(--button-background);
+    }
+
+    &__subtitle {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: var(--main-title-text-color);
+    }
+}
+

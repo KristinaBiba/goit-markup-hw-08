@@ -1,0 +1,25 @@
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    @extend %flex-center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+
+    cursor: pointer;
+
+    border: 1px solid var(--button-close-border-color);
+    border-radius: 50%;
+    background-color: var(--main-background-color);
+}
+
+.button-close__icon {
+    fill: var(--header-logo-color);
+
+    .button-close:hover &,
+    .button-close:focus & {
+        fill: var(--accent-text-color);
+    }
+}
