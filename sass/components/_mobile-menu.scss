@@ -1,13 +1,136 @@
 .mobile-menu {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: var(--main-background-color);
+    transition: transform var(--time-animation) var(--time-function);
 
     &.is-open {
-        // position: absolute;
-        top: 100%;
-        display: block;
+        display: flex;
     }
+
+    &__button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        @extend %flex-center;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: 0;
+
+        cursor: pointer;
+
+        background-color: var(--main-background-color);
+            }
+    &__contact {
+        margin-top: 0;
+        margin-bottom: 64px;
+        padding: 0;
+    }
+    &__tel {
+        font-size: 34px;
+        line-height: 1.18;
+
+        color: var(--accent-text-color);
+
+        @media screen and (max-width: 376px) {
+            & {
+                font-size: 24px;
+            }
+        }
+        }
+    &__mail {
+
+        font-size: 24px;
+        line-height: 1.17;
+        color: var(--main-text-color);
+    }
+    &__list + &__list {
+        margin-top: 32px;
+    }
+
+}
+.mobile-socials {
+
+    justify-content: flex-start;
+
+    @media screen and (max-width: 419px) {
+        & {
+        flex-wrap: wrap;
+
+        &__list {
+            padding-bottom: 20px;
+            flex-basis: 50%;
+        }
+        }
+    }
+        @media screen and (min-width: 419px) {
+            &__list + &__list {
+        margin-left: 20px;
+    }
+}
+    &__link {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: var(--accent-text-color);
+
+    }
+    &__link + &__link {
+        
+    }
+    &__list {
+    position: relative; 
+    }
+        @media screen and (min-width: 420px) {
+        .border::after {
+            content: "";
+            position: absolute;
+
+            right: -10px;
+            height: 22px;
+            width: 1px;
+
+            background-color: var(--input-date-border-color);
+    }
+}
+}
+.icon-close {
+    fill: var(--header-logo-color);
+    
+        .mobile-menu__button:hover &,
+        .mobile-menu__button:focus & {
+            fill: var(--accent-text-color);
+        }
+}
+
+.mobile-main-nav__list + .mobile-main-nav__list {
+        margin-top: 32px;
+}
+
+.mobile-main-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    &__link {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        color: var(--main-title-text-color);
+
+        &--active {
+            color: var(--accent-text-color);
+        }
+    }
+ 
 }

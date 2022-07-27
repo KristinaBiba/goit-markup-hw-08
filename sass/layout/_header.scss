@@ -17,8 +17,7 @@
     align-items: center;
   }
 
-.icon-menu, 
-.icon-close {
+.icon-menu {
     position: absolute;
     right: -5px;
     top: 10px;
@@ -27,13 +26,5 @@
     max-width: 40px;
     max-height: 40px;
 }
-.menu-button .icon-close {
-    display: none;
-}
-.menu-button.is-open .icon-close {
-    display: block;
-}
-.menu-button.is-open .icon-menu {
-    display: none;
-}
+
 

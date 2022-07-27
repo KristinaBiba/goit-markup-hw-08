@@ -2,7 +2,7 @@
 @import './base/base';
 
 @import "./utils/body";
-// @import "./utils/backdrop";
+@import "./utils/backdrop";
 @import "./utils/button";
 @import "./utils/container";
 @import "./utils/is-hidden";
@@ -15,13 +15,13 @@
 @import "./utils/title";
 @import "./utils/placeholders";
 
-// @import "./layout/modal";
+@import "./layout/modal";
 @import "./layout/footer";
 @import "./layout/header";
 
 @import "./components/button-close";
 @import "./components/clients-section";
-// @import "./components/form";
+@import "./components/form";
 @import "./components/hero";
 @import "./components/logo";
 @import "./components/nav";

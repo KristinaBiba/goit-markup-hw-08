@@ -32,62 +32,72 @@
             type="button"
             aria-expanded="false"
           >
-            <svg
-              width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню"
-            >
+            <svg width="40" height="40" aria-label="Открыть мобильное меню">
               <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <div data-menu class="mobile-menu">
+          <button data-menu-button class="mobile-menu__button" type="button">
+            <svg width="40" height="40" aria-label="Закрыть мобильное меню">
               <use
                 class="icon-close"
                 href="./images/icons.svg#icon-close"
               ></use>
             </svg>
           </button>
-        </div>
-        <div data-menu class="mobile-menu">
           <nav>
-            <ul class="main-nav">
-              <li class="main-nav__list">
+            <ul class="mobile-main-nav">
+              <li class="mobile-main-nav__list">
                 <a
-                  class="link main-nav__link main-nav__link--active"
+                  class="mobile-main-nav__link mobile-main-nav__link--active"
                   href="./index.html"
                   >Студия</a
                 >
               </li>
-              <li class="main-nav__list">
-                <a class="link main-nav__link" href="./portfolio.html"
+              <li class="mobile-main-nav__list">
+                <a class="mobile-main-nav__link" href="./portfolio.html"
                   >Портфолио</a
                 >
               </li>
-              <li class="main-nav__list">
-                <a class="link main-nav__link" href="">Контакты</a>
+              <li class="mobile-main-nav__list">
+                <a class="mobile-main-nav__link" href="">Контакты</a>
               </li>
             </ul>
           </nav>
-          <ul class="nav-contact">
-            <li class="nav-contact__list">
-              <a
-                class="link nav-contact__link"
-                href="mailto:info@devstudio.com"
-              >
-                <svg class="link__icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="nav-contact__list">
-              <a class="link nav-contact__link" href="tel:+380961111111">
-                <svg class="link__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+          <div class="">
+            <ul class="mobile-menu__contact">
+              <li class="mobile-menu__list">
+                <a class="link mobile-menu__tel" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__list">
+                <a
+                  class="link mobile-menu__mail"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="socials mobile-socials">
+              <li class="mobile-socials__list">
+                <a class="mobile-socials__link border" href="">Instagram</a>
+              </li>
+              <li class="mobile-socials__list">
+                <a class="mobile-socials__link border" href="">Twitter</a>
+              </li>
+              <li class="mobile-socials__list">
+                <a class="mobile-socials__link border" href=""> Facebook</a>
+              </li>
+              <li class="mobile-socials__list">
+                <a class="mobile-socials__link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div data-menu class="desktop-menu">
+        <div class="desktop-menu">
           <nav>
             <ul class="main-nav">
               <li class="main-nav__list">
@@ -253,8 +263,8 @@
               <picture>
                 <source
                   srcset="
-                    ./images/Demyanenko450-460.jpg    450w,
-                    ./images/Demyanenko450-460@2x.jpg 900w
+                    ./images/Demyanenko450-460.jpg    480w,
+                    ./images/Demyanenko450-460@2x.jpg 960w
                   "
                   media="(max-width: 480px)"
                   sizes="(min-width: 320px) 100vw"
@@ -320,8 +330,8 @@
               <picture>
                 <source
                   srcset="
-                    ./images/Repina450-460.jpg    450w,
-                    ./images/Repina450-460@2x.jpg 900w
+                    ./images/Repina450-460.jpg    480w,
+                    ./images/Repina450-460@2x.jpg 960w
                   "
                   media="(max-width: 480px)"
                   sizes="(min-width: 320px) 100vw"
@@ -387,8 +397,8 @@
               <picture>
                 <source
                   srcset="
-                    ./images/Tarasov450-460.jpg    450w,
-                    ./images/Tarasov450-460@2x.jpg 900w
+                    ./images/Tarasov450-460.jpg    480w,
+                    ./images/Tarasov450-460@2x.jpg 960w
                   "
                   media="(max-width: 480px)"
                   sizes="(min-width: 320px) 100vw"
@@ -454,8 +464,8 @@
               <picture>
                 <source
                   srcset="
-                    ./images/Yermakov450-460.jpg    450w,
-                    ./images/Yermakov450-460@2x.jpg 900w
+                    ./images/Yermakov450-460.jpg    480w,
+                    ./images/Yermakov450-460@2x.jpg 960w
                   "
                   media="(max-width: 480px)"
                   sizes="(min-width: 320px) 100vw"
@@ -576,7 +586,7 @@
           <a class="logo" href="./index.html"
             >Web<span class="footer__logo">Studio</span></a
           >
-          <address class="footer-address">
+          <address class="">
             <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
             <ul class="footer-address">
               <li class="footer-address__item">
@@ -594,7 +604,7 @@
             </ul>
           </address>
         </div>
-        <div>
+        <div class="footer__socials-inner">
           <h2 class="subtitle footer__subtitle">присоединяйтесь</h2>
           <ul class="socials">
             <li class="socials__list">
@@ -645,7 +655,7 @@
         </div>
         <form class="subscription">
           <h2 class="subtitle footer__subtitle">Подпишитесь на рассылку</h2>
-          <label>
+          <label class="email-form">
             <input
               class="input"
               type="mail"
@@ -663,7 +673,7 @@
         </form>
       </div>
     </footer>
-    <!-- <div data-modal class="backdrop is-hidden">
+    <div data-modal class="backdrop is-hidden">
       <div class="modal">
         <button data-modal-close class="button-close">
           <svg class="button-close__icon" width="18" height="18">
@@ -731,7 +741,7 @@
           </button>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="./modal.js"></script>
     <script src="./mobile-menu.js"></script>
   </body>
