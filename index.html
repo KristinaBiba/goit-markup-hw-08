@@ -26,16 +26,68 @@
           <a class="logo header__logo" href="./index.html"
             >Web<span class="logo__text">Studio</span></a
           >
-          <button data-menu-button type="button">
-            <svg class="icon-menu" width="40" height="40">
-              <use href="./images/icons.svg#icon-menu"></use>
-            </svg>
-            <svg class="icon-close" width="40" height="40">
-              <use href="./images/icons.svg#icon-close"></use>
+          <button
+            data-menu-button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <use
+                class="icon-close"
+                href="./images/icons.svg#icon-close"
+              ></use>
             </svg>
           </button>
         </div>
-        <div class="mobile-menu" data-menu>
+        <div data-menu class="mobile-menu">
+          <nav>
+            <ul class="main-nav">
+              <li class="main-nav__list">
+                <a
+                  class="link main-nav__link main-nav__link--active"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="main-nav__list">
+                <a class="link main-nav__link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="main-nav__list">
+                <a class="link main-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="nav-contact">
+            <li class="nav-contact__list">
+              <a
+                class="link nav-contact__link"
+                href="mailto:info@devstudio.com"
+              >
+                <svg class="link__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="nav-contact__list">
+              <a class="link nav-contact__link" href="tel:+380961111111">
+                <svg class="link__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div data-menu class="desktop-menu">
           <nav>
             <ul class="main-nav">
               <li class="main-nav__list">
@@ -198,11 +250,37 @@
           <h2 class="title">Наша команда</h2>
           <ul class="list">
             <li class="list-item list-item--white">
-              <img
-                src="./images/Demyanenko.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Demyanenko450-460.jpg    450w,
+                    ./images/Demyanenko450-460@2x.jpg 900w
+                  "
+                  media="(max-width: 480px)"
+                  sizes="(min-width: 320px) 100vw"
+                />
+                <source
+                  srcset="
+                    ./images/Demyanenko354-374.jpg    354w,
+                    ./images/Demyanenko354-374@2x.jpg 708w
+                  "
+                  media="(min-width: 481px) and (max-width: 768px)"
+                  sizes="(min-width: 481px) 50vw"
+                />
+                <source
+                  srcset="
+                    ./images/Demyanenko270-260.jpg    270w,
+                    ./images/Demyanenko270-260@2x.jpg 540w
+                  "
+                  media="(min-width: 769px)"
+                  sizes="(min-width: 769px) 25vw"
+                />
+                <img
+                  class="foto-member"
+                  src="./images/Demyanenko270-260.jpg"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="team-member">
                 <h3 class="team-member__title">Игорь Демьяненко</h3>
                 <p class="team-member__position">Product Designer</p>
@@ -239,7 +317,37 @@
               </div>
             </li>
             <li class="list-item list-item--white">
-              <img src="./images/Repina.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Repina450-460.jpg    450w,
+                    ./images/Repina450-460@2x.jpg 900w
+                  "
+                  media="(max-width: 480px)"
+                  sizes="(min-width: 320px) 100vw"
+                />
+                <source
+                  srcset="
+                    ./images/Repina354-374.jpg    354w,
+                    ./images/Repina354-374@2x.jpg 708w
+                  "
+                  media="(min-width: 481px) and (max-width: 768px)"
+                  sizes="(min-width: 481px) 50vw"
+                />
+                <source
+                  srcset="
+                    ./images/Repina270-260.jpg    270w,
+                    ./images/Repina270-260@2x.jpg 540w
+                  "
+                  media="(min-width: 769px)"
+                  sizes="(min-width: 769px) 25vw"
+                />
+                <img
+                  class="foto-member"
+                  src="./images/Repina270-260.jpg"
+                  alt="Ольга Репина"
+                />
+              </picture>
               <div class="team-member">
                 <h3 class="team-member__title">Ольга Репина</h3>
                 <p class="team-member__position">Frontend Developer</p>
@@ -276,11 +384,37 @@
               </div>
             </li>
             <li class="list-item list-item--white">
-              <img
-                src="./images/Tarasov.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Tarasov450-460.jpg    450w,
+                    ./images/Tarasov450-460@2x.jpg 900w
+                  "
+                  media="(max-width: 480px)"
+                  sizes="(min-width: 320px) 100vw"
+                />
+                <source
+                  srcset="
+                    ./images/Tarasov354-374.jpg    354w,
+                    ./images/Tarasov354-374@2x.jpg 708w
+                  "
+                  media="(min-width: 481px) and (max-width: 768px)"
+                  sizes="(min-width: 481px) 50vw"
+                />
+                <source
+                  srcset="
+                    ./images/Tarasov270-260.jpg    270w,
+                    ./images/Tarasov270-260@2x.jpg 540w
+                  "
+                  media="(min-width: 769px)"
+                  sizes="(min-width: 769px) 25vw"
+                />
+                <img
+                  class="foto-member"
+                  src="./images/Tarasov270-260.jpg"
+                  alt="Николай Тарасов"
+                />
+              </picture>
               <div class="team-member">
                 <h3 class="team-member__title">Николай Тарасов</h3>
                 <p class="team-member__position">Marketing</p>
@@ -317,11 +451,37 @@
               </div>
             </li>
             <li class="list-item list-item--white">
-              <img
-                src="./images/Yermakov.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Yermakov450-460.jpg    450w,
+                    ./images/Yermakov450-460@2x.jpg 900w
+                  "
+                  media="(max-width: 480px)"
+                  sizes="(min-width: 320px) 100vw"
+                />
+                <source
+                  srcset="
+                    ./images/Yermakov354-374.jpg    354w,
+                    ./images/Yermakov354-374@2x.jpg 708w
+                  "
+                  media="(min-width: 481px) and (max-width: 768px)"
+                  sizes="(min-width: 481px) 50vw"
+                />
+                <source
+                  srcset="
+                    ./images/Yermakov270-260.jpg    270w,
+                    ./images/Yermakov270-260@2x.jpg 540w
+                  "
+                  media="(min-width: 769px)"
+                  sizes="(min-width: 769px) 25vw"
+                />
+                <img
+                  class="foto-member"
+                  src="./images/Yermakov270-260.jpg"
+                  alt="Михаил Ермаков"
+                />
+              </picture>
               <div class="team-member">
                 <h3 class="team-member__title">Михаил Ермаков</h3>
                 <p class="team-member__position">UI Designer</p>
@@ -364,42 +524,42 @@
         <div class="container">
           <h2 class="title">Постоянные клиенты</h2>
           <ul class="clients">
-            <li class="list-item clients__list-item">
+            <li class="clients__list-item">
               <a class="client-link" href="">
                 <svg class="client-link__img" width="41" height="47">
                   <use href="./images/icons.svg#icon-group1"></use>
                 </svg>
               </a>
             </li>
-            <li class="list-item clients__list-item">
+            <li class="clients__list-item">
               <a class="client-link" href="">
                 <svg class="client-link__img" width="40" height="52">
                   <use href="./images/icons.svg#icon-group2"></use>
                 </svg>
               </a>
             </li>
-            <li class="list-item clients__list-item">
+            <li class="clients__list-item">
               <a class="client-link" href="">
                 <svg class="client-link__img" width="44" height="42">
                   <use href="./images/icons.svg#icon-group3"></use>
                 </svg>
               </a>
             </li>
-            <li class="list-item clients__list-item">
+            <li class="clients__list-item">
               <a class="client-link" href="">
                 <svg class="client-link__img" width="85" height="41">
                   <use href="./images/icons.svg#icon-group4"></use>
                 </svg>
               </a>
             </li>
-            <li class="list-item clients__list-item">
+            <li class="clients__list-item">
               <a class="client-link" href="">
                 <svg class="client-link__img" width="63" height="46">
                   <use href="./images/icons.svg#icon-group5"></use>
                 </svg>
               </a>
             </li>
-            <li class="list-item clients__list-item">
+            <li class="clients__list-item">
               <a class="client-link" href="">
                 <svg class="client-link__img" width="94" height="44">
                   <use href="./images/icons.svg#icon-group6"></use>
@@ -503,7 +663,7 @@
         </form>
       </div>
     </footer>
-    <div data-modal class="backdrop is-hidden">
+    <!-- <div data-modal class="backdrop is-hidden">
       <div class="modal">
         <button data-modal-close class="button-close">
           <svg class="button-close__icon" width="18" height="18">
@@ -571,7 +731,7 @@
           </button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./modal.js"></script>
     <script src="./mobile-menu.js"></script>
   </body>

@@ -16,12 +16,15 @@
 }
 
 .address {
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 0;
 
     color: var(--additional-text-color);
     font-style: normal;
     line-height: 1.71;
+    
 }
 
 .footer-address {
@@ -41,7 +44,10 @@
 }
 
 .contacts {
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-right: 70px;
 }
 
 .subscription {

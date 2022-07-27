@@ -1,29 +1,39 @@
 .header {
     border-bottom: 1px solid var(--header-border);
 
-    // &__container {
-    //     display: flex;
-    //     align-items: center;
-    // }
+    &__container {
+        position: relative;
+        // display: flex;
+        // align-items: center;
+    }
 }
 
 .header-inner {
     position: relative;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
 .icon-menu, 
 .icon-close {
     position: absolute;
     right: -5px;
     top: 10px;
 }
-.icon-close {
+.menu-button {
+    max-width: 40px;
+    max-height: 40px;
+}
+.menu-button .icon-close {
     display: none;
 }
-.mobile-menu.is-open .icon-close {
+.menu-button.is-open .icon-close {
     display: block;
 }
-.mobile-menu.is-open .icon-menu {
+.menu-button.is-open .icon-menu {
     display: none;
 }
+
