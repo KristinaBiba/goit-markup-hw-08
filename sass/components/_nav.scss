@@ -1,16 +1,32 @@
-.main-nav,
-.nav-contact {
-    // display: flex;
+.main-nav {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+
+    @media screen and (min-width:768px) {
+            display: flex;
+        }
 }
 
 .nav-contact {
-    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 96px;
+
+    &__list:first-child {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+    }
 }
 
-.main-nav__list,
+.main-nav__list {
+    margin-right: 50px;
+}
+
 .nav-contact__list {
     // margin-right: 50px;
 }
@@ -22,8 +38,12 @@
 
 .main-nav__link {
     display: block;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
+
+    @media screen and (min-width:768px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
 
     color: var(--main-title-text-color);
 }

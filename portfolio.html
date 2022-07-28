@@ -21,44 +21,125 @@
   <body class="body">
     <header class="header">
       <div class="container header__container">
-        <a class="logo header__logo" href="./index.html"
-          >Web<span class="logo__text">Studio</span></a
-        >
-        <nav>
-          <ul class="main-nav">
-            <li class="main-nav__list">
-              <a class="link main-nav__link" href="./index.html">Студия</a>
-            </li>
-            <li class="main-nav__list">
+        <div class="header-inner">
+          <a class="logo header__logo" href="./index.html"
+            >Web<span class="logo__text">Studio</span></a
+          >
+          <button
+            data-mobile-menu-open
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+          >
+            <svg width="40" height="40" aria-label="Открыть мобильное меню">
+              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <div data-mobile-menu class="mobile-menu">
+          <button
+            data-mobile-menu-close
+            class="mobile-menu__button"
+            type="button"
+          >
+            <svg width="40" height="40" aria-label="Закрыть мобильное меню">
+              <use
+                class="icon-close"
+                href="./images/icons.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="mobile-main-nav">
+              <li class="mobile-main-nav__list">
+                <a class="mobile-main-nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-main-nav__list">
+                <a
+                  class="mobile-main-nav__link mobile-main-nav__link--active"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-main-nav__list">
+                <a class="mobile-main-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="">
+            <ul class="mobile-menu__contact">
+              <li class="mobile-menu__list">
+                <a class="link mobile-menu__tel" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__list">
+                <a
+                  class="link mobile-menu__mail"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="socials mobile-socials">
+              <li class="mobile-socials__list">
+                <a class="mobile-socials__link border" href="">Instagram</a>
+              </li>
+              <li class="mobile-socials__list">
+                <a class="mobile-socials__link border" href="">Twitter</a>
+              </li>
+              <li class="mobile-socials__list">
+                <a class="mobile-socials__link border" href=""> Facebook</a>
+              </li>
+              <li class="mobile-socials__list">
+                <a class="mobile-socials__link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="desktop-menu">
+          <nav>
+            <ul class="main-nav">
+              <li class="main-nav__list">
+                <a
+                  class="link main-nav__link main-nav__link--active"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="main-nav__list">
+                <a class="link main-nav__link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="main-nav__list">
+                <a class="link main-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="nav-contact">
+            <li class="nav-contact__list">
               <a
-                class="link main-nav__link main-nav__link--active"
-                href="./portfolio.html"
-                >Портфолио</a
+                class="link nav-contact__link"
+                href="mailto:info@devstudio.com"
+              >
+                <svg class="link__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="main-nav__list">
-              <a class="link main-nav__link" href="">Контакты</a>
+            <li class="nav-contact__list">
+              <a class="link nav-contact__link" href="tel:+380961111111">
+                <svg class="link__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="nav-contact">
-          <li class="nav-contact__list">
-            <a class="link nav-contact__link" href="mailto:info@devstudio.com">
-              <svg class="link__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="nav-contact__list">
-            <a class="link nav-contact__link" href="tel:+380961111111">
-              <svg class="link__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -86,13 +167,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-1.jpg"
-                    alt="Ноутбук с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-1_450-294.jpg    480w,
+                        ./images/portfolio/img-1_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-1_354-294.jpg    354w,
+                        ./images/portfolio/img-1_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-1_370-294.jpg    270w,
+                        ./images/portfolio/img-1_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-1_450-294.jpg"
+                      alt="Ноутбук с командой"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -111,13 +216,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-2.jpg"
-                    alt="Два баскетболиста с мячём"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-2_450-294.jpg    480w,
+                        ./images/portfolio/img-2_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-2_354-294.jpg    354w,
+                        ./images/portfolio/img-2_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-2_370-294.jpg    270w,
+                        ./images/portfolio/img-2_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-2_450-294.jpg"
+                      alt="Два баскетболиста с мячём"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -136,13 +265,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-3.jpg"
-                    alt="Логотип рыбного ресторана"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-3_450-294.jpg    480w,
+                        ./images/portfolio/img-3_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-3_354-294.jpg    354w,
+                        ./images/portfolio/img-3_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-3_370-294.jpg    270w,
+                        ./images/portfolio/img-3_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-3_450-294.jpg"
+                      alt="Логотип рыбного ресторана"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -161,13 +314,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-4.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-4_450-294.jpg    480w,
+                        ./images/portfolio/img-4_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-4_354-294.jpg    354w,
+                        ./images/portfolio/img-4_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-4_370-294.jpg    270w,
+                        ./images/portfolio/img-4_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-4_450-294.jpg"
+                      alt="Наушники"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -186,13 +363,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-5.jpg"
-                    alt="Две коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-5_450-294.jpg    480w,
+                        ./images/portfolio/img-5_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-5_354-294.jpg    354w,
+                        ./images/portfolio/img-5_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-5_370-294.jpg    270w,
+                        ./images/portfolio/img-5_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-5_450-294.jpg"
+                      alt="Две коробки"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -211,13 +412,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-6.jpg"
-                    alt="Монитор с веб-сайтом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-6_450-294.jpg    480w,
+                        ./images/portfolio/img-6_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-6_354-294.jpg    354w,
+                        ./images/portfolio/img-6_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-6_370-294.jpg    270w,
+                        ./images/portfolio/img-6_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-6_450-294.jpg"
+                      alt="Монитор с веб-сайтом"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -236,13 +461,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-7.jpg"
-                    alt="Развернутый журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-7_450-294.jpg    480w,
+                        ./images/portfolio/img-7_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-7_354-294.jpg    354w,
+                        ./images/portfolio/img-7_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-7_370-294.jpg    270w,
+                        ./images/portfolio/img-7_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-7_450-294.jpg"
+                      alt="Развернутый журнал"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -261,13 +510,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-8.jpg"
-                    alt="Белая лейба"
-                    width="364"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-8_450-294.jpg    480w,
+                        ./images/portfolio/img-8_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-8_354-294.jpg    354w,
+                        ./images/portfolio/img-8_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-8_370-294.jpg    270w,
+                        ./images/portfolio/img-8_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-8_450-294.jpg"
+                      alt="Белая лейба"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -286,13 +559,37 @@
             <li class="list__portfolio">
               <a class="link-box">
                 <div class="card">
-                  <img
-                    class="card_img"
-                    src="./images/img-9.jpg"
-                    alt="Ноутбук с приложением"
-                    width="364"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-9_450-294.jpg    480w,
+                        ./images/portfolio/img-9_450-294@2x.jpg 960w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 320px) 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-9_354-294.jpg    354w,
+                        ./images/portfolio/img-9_354-294@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-9_370-294.jpg    270w,
+                        ./images/portfolio/img-9_370-294@2x.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 25vw"
+                    />
+                    <img
+                      class="card__img"
+                      src="./images/portfolio/img-9_450-294.jpg"
+                      alt="Ноутбук с приложением"
+                    />
+                  </picture>
                   <div class="card__inner">
                     <p class="card__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -318,7 +615,7 @@
           <a class="logo" href="./index.html"
             >Web<span class="footer__logo">Studio</span></a
           >
-          <address class="footer-address">
+          <address class="">
             <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
             <ul class="footer-address">
               <li class="footer-address__item">
@@ -336,7 +633,7 @@
             </ul>
           </address>
         </div>
-        <div>
+        <div class="footer__socials-inner">
           <h2 class="subtitle footer__subtitle">присоединяйтесь</h2>
           <ul class="socials">
             <li class="socials__list">
@@ -387,7 +684,7 @@
         </div>
         <form class="subscription">
           <h2 class="subtitle footer__subtitle">Подпишитесь на рассылку</h2>
-          <label>
+          <label class="email-form">
             <input
               class="input"
               type="mail"
@@ -405,5 +702,6 @@
         </form>
       </div>
     </footer>
+    <script src="./mobile-menu.js"></script>
   </body>
 </html>

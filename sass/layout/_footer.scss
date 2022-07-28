@@ -60,6 +60,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
     // margin-left: 73px;
 
     &__icon {

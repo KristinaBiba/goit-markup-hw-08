@@ -5,10 +5,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
     // justify-content: center;
 
 }
 .clients__list-item{
+
     flex-basis: calc((100% - 30px)/2);
 }
 
@@ -18,6 +22,9 @@
 
 .client-link {
     @extend %flex-center;
+    max-width: 210px;
+    margin-right: auto;
+    margin-left: auto;
     // width: 170px;
     height: 92px;
     border: 1px solid var(--icon-color);
