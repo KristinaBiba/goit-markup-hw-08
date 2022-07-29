@@ -1,98 +1,141 @@
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    background-color: var(--hero-background-color);
+  background-color: var(--hero-background-color);
 
-    // &__container {
-    //     display: flex;
-    // }
-
-    &__subtitle {
-        margin-top: 0;
-        margin-bottom: 20px;
-
-        color: var(--additional-text-color);
+  &__container {
+    @media screen and (min-width: 1200px) {
+      display: flex;
     }
-    &__socials-inner {
-        margin-bottom: 60px;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: var(--additional-text-color);
+    @media screen and (min-width: 1200px) {
+      text-align: start;
     }
+  }
+  &__socials-inner {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+      margin-right: 94px;
+    }
+  }
 }
 .footer-inner {
-    @media screen and (min-width: 768px) and (max-width:1199px) {
-        display: flex;
-        justify-content: space-around;
-    }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
 }
 
 .address {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 0;
 
-    color: var(--additional-text-color);
-    font-style: normal;
-    line-height: 1.71;
-    
+  color: var(--additional-text-color);
+  font-style: normal;
+  line-height: 1.71;
 }
 
 .footer-address {
-    margin-top: 0;
-    margin-bottom: 60px;
-    // margin-bottom: 0;
-    padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding-left: 0;
 
-    &__link {
-        color: var(--adress-text-color);
-        font-style: normal;
-        line-height: 1.71;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    color: var(--adress-text-color);
+    font-style: normal;
+    line-height: 1.71;
+  }
+
+  &__item {
+    margin-top: 9px;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      text-align: start;
     }
-    
-    &__item {
-        margin-top: 9px;
-        text-align: center;
-    }
+  }
 }
 
 .contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // margin-right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+  }
 }
 
 .subscription {
-    display: flex;
+  @media screen and (max-width: 1199px) {
     flex-direction: column;
     align-items: center;
     max-width: 450px;
     margin-right: auto;
     margin-left: auto;
-    // margin-left: 73px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    width: 50%;
+    padding-left: 15px;
+  }
 
-    &__icon {
-        margin-left: 10px;
-        fill: var(--additional-text-color);
-    }
+  &__icon {
+    margin-left: 10px;
+    fill: var(--additional-text-color);
+  }
+}
+.label-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 12px;
+  }
 }
 .email-form {
+  @media screen and (max-width: 1199px) {
     width: 100%;
+  }
 }
 .input {
-    // width: 358px;
-    height: 50px;
-    width: 100%;
-    // margin-right: 12px;
-    margin-bottom: 20px;
-    padding: 15px 16px;
-    border: 1px solid var(--subscription-input-color);
-    border-radius: 4px;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    background-color: inherit;
-    color: var(--adress-text-color);
-    outline: none;
-}
+  height: 50px;
+  width: 100%;
 
+  margin-bottom: 20px;
+  padding: 15px 16px;
+  border: 1px solid var(--subscription-input-color);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  background-color: inherit;
+  color: var(--adress-text-color);
+  outline: none;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+  }
+}

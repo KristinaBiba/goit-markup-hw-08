@@ -20,6 +20,10 @@
 
     @media screen and (min-width:1200px) {
         display: flex;
+        margin-left: 0;
+        &__list:first-child {
+                margin-bottom: 0;
+            }
     }
 }
 
@@ -28,7 +32,10 @@
 }
 
 .nav-contact__list {
-    // margin-right: 50px;
+    @media screen and (min-width:1200px) {
+        margin-right: 50px;
+    }
+
 }
 
 .main-nav__list:last-child,
@@ -38,14 +45,12 @@
 
 .main-nav__link {
     display: block;
+    color: var(--main-title-text-color);
 
     @media screen and (min-width:768px) {
         padding-top: 32px;
         padding-bottom: 32px;
     }
-
-
-    color: var(--main-title-text-color);
 }
 
 .main-nav__link--active {

@@ -1,71 +1,66 @@
 .clients {
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 450px;
-    margin-right: auto;
-    margin-left: auto;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
 
-    @media screen and (min-width: 768px) {
-        max-width: 738px;
-    }
-    // justify-content: center;
-
+  @media screen and (min-width: 768px) {
+    max-width: 738px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    flex-wrap: nowrap;
+  }
 }
-.clients__list-item{
-    flex-basis: calc((100% - 30px)/2);
+.clients__list-item {
+  flex-basis: calc((100% - 30px) / 2);
 
-    @media screen and (min-width: 768px) {
-        flex-basis: calc((100% - 60px)/3);
-    }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
-
-// .clients__list-item:not(:last-child) {
-//     // margin-right: 30px;
-// }
 
 .client-link {
-    @extend %flex-center;
-    max-width: 210px;
-    margin-right: auto;
-    margin-left: auto;
-    // width: 170px;
-    height: 92px;
-    border: 1px solid var(--icon-color);
-    border-radius: 4px;
+  @extend %flex-center;
+  max-width: 210px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
 
-    transition: border-color var(--time-animation) var(--time-function),
-        box-shadow var(--time-animation) var(--time-function);
+  transition: border-color var(--time-animation) var(--time-function),
+    box-shadow var(--time-animation) var(--time-function);
 
-    &:hover,
-    &:focus {
-        border-color: var(--accent-text-color);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
+  &:hover,
+  &:focus {
+    border-color: var(--accent-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
-    @media screen and (min-width: 768px) {
-        margin-right: 0;
-        margin-left: 0;
-        max-width: 226px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 226px;
+  }
 }
 
 .client-link__img {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    fill: var(--icon-color);
+  fill: var(--icon-color);
 
-    transition: fill var(--time-animation) var(--time-function);
+  transition: fill var(--time-animation) var(--time-function);
 
-    .client-link:hover &,
-    .client-link:focus & {
-        fill: var(--accent-text-color);
-    }
+  .client-link:hover &,
+  .client-link:focus & {
+    fill: var(--accent-text-color);
+  }
 }
-
-
