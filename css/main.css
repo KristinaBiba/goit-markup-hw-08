@@ -505,10 +505,8 @@ button {
 }
 
 .header {
-  border-bottom: 1px solid var(--header-border);
-}
-.header__container {
   position: relative;
+  border-bottom: 1px solid var(--header-border);
 }
 @media screen and (min-width: 768px) {
   .header__container {
@@ -941,7 +939,7 @@ button {
   }
 }
 
-.list__portfolio {
+.list__portfolio:not(:last-child) {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -1126,11 +1124,11 @@ button {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding: 48px 40px;
   background-color: var(--main-background-color);
