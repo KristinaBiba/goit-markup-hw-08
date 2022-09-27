@@ -1,98 +1,94 @@
 .form-modal {
-    padding-left: 40px;
-    padding-right: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .form-title {
-    margin: 0 0 12px 0;
-    text-align: center;
-    font-size: 20px;
-    color: var(--main-title-text-color);
+  margin: 0 0 12px 0;
+  text-align: center;
+  font-size: 20px;
+  color: var(--main-title-text-color);
 }
 
 .form-box {
-    position: relative;
+  position: relative;
 }
 
 .svg-modal {
-    position: absolute;
-    bottom: 11px;
-    left: 12px;
-    fill: var(--header-logo-colo);
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  fill: var(--header-logo-colo);
 }
 
 .label {
-    display: block;
+  display: block;
 }
 
 .input-date {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    margin-top: 4px;
-    padding-left: 42px;
-    padding-right: 15px;
-    height: 40px;
-    border: 1px solid var(--input-date-border-color);
-    border-radius: 4px;
-    outline: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 4px;
+  padding-left: 42px;
+  padding-right: 15px;
+  height: 40px;
+  border: 1px solid var(--input-date-border-color);
+  border-radius: 4px;
+  outline: none;
 
-    font-size: 14px;
-    line-height: 1.17;
-    color: var(--main-text-color);
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--main-text-color);
 
-    &:focus {
-        border-color: var(--accent-text-color);
-    }
-    @media screen and (min-width:1200px) {
-        font-size: 12px;
-
-    }
+  &:focus {
+    border-color: var(--accent-text-color);
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 12px;
+  }
 }
 
-
-
-.input-date:focus+.svg-modal {
-    fill: var(--accent-text-color);
+.input-date:focus + .svg-modal {
+  fill: var(--accent-text-color);
 }
 
 .input-date--large {
-    height: 120px;
-    resize: none;
-    color: var();
-    letter-spacing: 0.01em;
-    padding: 12px 16px;
-    margin-bottom: 20px;
+  height: 120px;
+  resize: none;
+  color: var();
+  letter-spacing: 0.01em;
+  padding: 12px 15px 12px 12 px;
+  margin-bottom: 20px;
 }
 
 .form-checkbox__text {
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--main-title-text-color);
-    border-radius: 2px;
-    margin-right: 8px;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-title-text-color);
+  border-radius: 2px;
+  margin-right: 8px;
 }
 
-.approval-box:checked+.form-checkbox__text {
-    background-image: url(../images/check.svg);
-    background-size: contain;
-    background-origin: border-box;
-    border-color: var(--accent-text-color);
+.approval-box:checked + .form-checkbox__text {
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-text-color);
 }
 
 .form-checkbox {
-    display: inline-flex;
-    align-items: center;
-    font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
 
-    @media screen and (min-width:1200px){
-        font-size: 14px;
-        
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .contract {
-    color: var(--accent-text-color);
-    text-decoration: underline;
+  color: var(--accent-text-color);
+  text-decoration: underline;
 }
