@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var phoneInputs = document.querySelectorAll('input[data-tel-input]');
+    const phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
-    var getInputNumbersValue = function (input) {
+    const getInputNumbersValue = function (input) {
         // Return stripped input value — just numbers
         return input.value.replace(/\D/g, '');
     }
 
-    var onPhonePaste = function (e) {
-        var input = e.target,
+    const onPhonePaste = function (e) {
+        const input = e.target,
             inputNumbersValue = getInputNumbersValue(input);
-        var pasted = e.clipboardData || window.clipboardData;
+        const pasted = e.clipboardData || window.clipboardData;
         if (pasted) {
-            var pastedText = pasted.getData('Text');
+            const pastedText = pasted.getData('Text');
             if (/\D/g.test(pastedText)) {
                 // Attempt to paste non-numeric symbol — remove all non-numeric symbols,
                 // formatting will be in onPhoneInput handler
@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    var onPhoneInput = function (e) {
-        var input = e.target,
+    const onPhoneInput = function (e) {
+        const input = e.target,
             inputNumbersValue = getInputNumbersValue(input),
             selectionStart = input.selectionStart,
             formattedInputValue = "";
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (["3", "8", "0"].indexOf(inputNumbersValue[0]) > -1) {
             if (inputNumbersValue[0] == "0") inputNumbersValue = "38" + inputNumbersValue;
             if (inputNumbersValue[0] == "8") inputNumbersValue = "3" + inputNumbersValue;
-            var firstSymbols = (inputNumbersValue[0] == "0") ? "+38" : "+38";
+            const firstSymbols = (inputNumbersValue[0] == "0") ? "+38" : "+38";
             formattedInputValue = input.value = firstSymbols + " ";
             if (inputNumbersValue.length > 2) {
                 formattedInputValue += '(' + inputNumbersValue.substring(2, 5);
@@ -62,14 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         input.value = formattedInputValue;
     }
-    var onPhoneKeyDown = function (e) {
+    const onPhoneKeyDown = function (e) {
         // Clear input after remove last symbol
-        var inputValue = e.target.value.replace(/\D/g, '');
+        const inputValue = e.target.value.replace(/\D/g, '');
         if (e.keyCode == 8 && inputValue.length == 1) {
             e.target.value = "";
         }
     }
-    for (var phoneInput of phoneInputs) {
+    for (const phoneInput of phoneInputs) {
         phoneInput.addEventListener('keydown', onPhoneKeyDown);
         phoneInput.addEventListener('input', onPhoneInput, false);
         phoneInput.addEventListener('paste', onPhonePaste, false);
